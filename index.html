@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conversão Biológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <h1>Calculadora de Conversão Biológica</h1>
+        <form id="calculo-form">
+            <h2>Parâmetros de Nitrogênio</h2>
+            <label for="rmax1">Taxa Máxima de Reação (rmax1):</label>
+            <input type="number" id="rmax1"  placeholder="500">
+            
+            <label for="Ci1">Concentração Inicial de Influente (Ci1):</label>
+            <input type="number" id="Ci1"  placeholder="53.1">
+            
+            <label for="Ks1">Constante de Saturação (Ks1):</label>
+            <input type="number" id="Ks1"  placeholder="45.8">
+            
+            <h2>Parâmetros de Carbono</h2>
+            <label for="rmax2">Taxa Máxima de Reação (rmax2):</label>
+            <input type="number" id="rmax2"  placeholder="3000">
+            
+            <label for="Ci2">Concentração Inicial de Influente (Ci2):</label>
+            <input type="number" id="Ci2"  placeholder="512">
+            
+            <label for="Ks2">Constante de Saturação (Ks2):</label>
+            <input type="number" id="Ks2"  placeholder="234">
+            
+            <h2>Configurações de Cálculo</h2>
+            <label for="rec1">Taxas de Recirculação para Nitrogênio (separadas por vírgulas):</label>
+            <input type="text" id="rec1"  placeholder="0,0.5,1,1.5,2">
+            
+            <label for="rec2">Taxas de Recirculação para Carbono (separadas por vírgulas):</label>
+            <input type="text" id="rec2"  placeholder="0,0.5,1,1.5,2">
+            
+            <button type="button" onclick="calcular()">Calcular</button>
+        </form>
+        
+        <h2>Resultados</h2>
+        <div id="resultados"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
